@@ -18,7 +18,7 @@ MongoClient.connect('mongodb://localhost:27017/appTest',(err,db)=>{
        }
        console.log(JSON.stringify(result.ops,undefined,2));
     });*/
-    db.collection("users").insertOne({
+    /*db.collection("users").insertOne({
         name:"pullak",
         age:26,
         location :"pandav Nagar , Delhi"
@@ -27,6 +27,15 @@ MongoClient.connect('mongodb://localhost:27017/appTest',(err,db)=>{
             return console.log("Unable to insert the value in to the record");
         }
         console.log(JSON.stringify(result.ops,undefined,2));
-    });
+    });*/
+    db.collection('Appone').insertMany([
+        {name : "hello world", value :'false'},
+        {name : "hello world", value :'false'},
+        {name : "hello world", value :'false'}
+    ]);/*,(err,result)=>{
+        if(err)
+            return console.log("unable to add");
+        console.log(JSON.stringify(result.ops,undefined,2));
+    });*/
     db.close();
 });
