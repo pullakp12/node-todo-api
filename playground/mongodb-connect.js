@@ -38,4 +38,5 @@ MongoClient.connect('mongodb://localhost:27017/appTest',(err,db)=>{
         console.log(JSON.stringify(result.ops,undefined,2));
     });*/
     db.close();
+
 });
